@@ -1,0 +1,2 @@
+<!-- resources/views/components/checkbox.blade.php -->
+<input {{ $attributes->merge(['type' => 'checkbox', 'class' => 'rounded border-gray-300 text-indigo-600 shadow-sm focus:ring-indigo-500 dark:bg-gray-800 dark:border-gray-600 dark:focus:ring-offset-gray-800']) }} />
