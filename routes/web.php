@@ -65,3 +65,8 @@ Route::middleware('auth')->group(function () {
         Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit')->middleware('auth');
         Route::put('/profile', [ProfileController::class, 'update'])->name('profile.update')->middleware('auth');
     });
+
+// Route for link storage
+Route::get('/storage', function ($path) {
+    return Storage::disk('s3')->response($path);
+});
