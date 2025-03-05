@@ -67,6 +67,6 @@ Route::middleware('auth')->group(function () {
     });
 
 // Route for link storage
-Route::get('/storage', function ($path) {
-    return Storage::disk('s3')->response($path);
+Route::get('/linkstorage', function () {
+    Artisan::call('storage:link');// this will do the command line job
 });
